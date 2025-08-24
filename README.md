@@ -1,8 +1,10 @@
-🐾 Flutter Dog Dashboard
+# 🐾 Flutter Dog Dashboard
 
 A feature-rich Flutter app for managing dogs and their owners. Track dog info, owner details, and photos, with a clean and interactive UI built with Riverpod and Hive.
 
-📦 Features
+---
+
+## 📦 Features
 
 🐶 Dog Management
 
@@ -52,9 +54,9 @@ GraphQL	graphql_flutter
 
 UI	Material Design, Responsive Layouts
 
-📱 Screenshots
+## 📱 Screenshots
 
-🚀 Getting Started
+## 🚀 Getting Started
 1. Prerequisites
 
 Flutter 3.10+
