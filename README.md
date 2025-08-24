@@ -57,6 +57,7 @@ UI	Material Design, Responsive Layouts
 ---
 ## 📱 Screenshots
 <img width="409" height="885" alt="image" src="https://github.com/user-attachments/assets/293ea63b-1cbe-4dbb-8587-0d5a29347ba5" />
+<img width="409" height="885" alt="image" src="https://github.com/user-attachments/assets/7df0d3b3-ca35-4756-9524-984cda6090e5" />
 <img width="409" height="885" alt="image" src="https://github.com/user-attachments/assets/c29286ee-ce66-4884-b6b2-b70ab8f0c64a" />
 
 ---
