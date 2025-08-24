@@ -54,6 +54,20 @@ GraphQL	graphql_flutter
 
 UI	Material Design, Responsive Layouts
 
+## 🔧 Tech Stack
+
+| Area                    | Package / Technology                                              |
+|-------------------------|-------------------------------------------------------------------|
+| **State Mgmt**          | [Riverpod](https://riverpod.dev/)                                 |
+| **GraphQL**             | [graphql_flutter](https://pub.dev/packages/graphql_flutter)       |
+| **Permissions**         | [permission_handler](https://pub.dev/packages/permission_handler) |
+| **Local Storage**       | [hive](https://pub.dev/packages/hive)                             |
+| **Testing / Mocking**   | [mockito](https://pub.dev/packages/mockito)                       |
+| **Freezed**             | [freezed](https://pub.dev/packages/freezed)                       |
+| **Permissions**         | [permission_handler](https://pub.dev/packages/permission_handler) |
+| **UI**                  | Material Design, Responsive Layouts                               |
+
+
 ---
 ## 📱 Screenshots
 <img width="409" height="885" alt="image" src="https://github.com/user-attachments/assets/293ea63b-1cbe-4dbb-8587-0d5a29347ba5" />
@@ -63,19 +77,18 @@ UI	Material Design, Responsive Layouts
 ---
 
 ## 🚀 Getting Started
-1. Prerequisites
+### 1. Prerequisites
 
-Flutter 3.10+
+- Flutter 3.10+
+- Dart 3.x
+- Android/iOS emulator or real device with Bluetooth
 
-Dart 3.x
+### 2. Install Dependencies
 
-Android/iOS emulator or real device with camera
-
-2. Install Dependencies
+```bash
 flutter pub get
 
-3. Run the App
-flutter run
+---
 
 📝 Notes
 
