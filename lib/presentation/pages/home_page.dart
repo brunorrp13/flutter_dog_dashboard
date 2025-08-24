@@ -77,71 +77,104 @@ class _SavedDogsPageState extends State<HomePage> {
             ],
           ),
           body: dogs.isEmpty
-              ? const Center(child: Text('No saved dogs yet'))
-              : ListView.builder(
-                  padding: const EdgeInsets.all(12),
-                  itemCount: dogs.length,
-                  itemBuilder: (context, index) {
-                    final dog = dogs[index] as Map;
-                    return Card(
-                      margin: const EdgeInsets.symmetric(vertical: 8),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
+              ? Container(
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.orangeAccent, Colors.deepOrange],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.pets, size: 80, color: Colors.white),
+                      SizedBox(height: 20),
+                      Text(
+                        'Welcome to Dog Dashboard!\nAdd your first furry friend 🐾',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold),
                       ),
-                      elevation: 3,
-                      child: ListTile(
-                        contentPadding: const EdgeInsets.all(12),
-                        leading: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: NetworkImage(dog['imageUrl']),
+                    ],
+                  ),
+                )
+              : Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.white, Colors.orangeAccent],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                  ),
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(12),
+                    itemCount: dogs.length,
+                    itemBuilder: (context, index) {
+                      final dog = dogs[index] as Map;
+                      return Card(
+                        margin: const EdgeInsets.symmetric(vertical: 8),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
                         ),
-                        title: Text(
-                          dog['name'],
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                        elevation: 3,
+                        child: ListTile(
+                          contentPadding: const EdgeInsets.all(12),
+                          leading: CircleAvatar(
+                            radius: 30,
+                            backgroundImage: NetworkImage(dog['imageUrl']),
                           ),
-                        ),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Country: ${dog['countryOfOrigin']}'),
-                            const SizedBox(height: 8),
-                            Row(
-                              children: [
-                                dog['ownerImageUrl'] != null
-                                    ? CircleAvatar(
-                                        radius: 15,
-                                        backgroundImage: FileImage(
-                                          File(dog['ownerImageUrl']),
-                                        ),
-                                      )
-                                    : const SizedBox(),
-                                const SizedBox(width: 8),
-                                Expanded(
-                                  child: Text(
-                                    'Owner: ${dog['ownerName']}',
-                                    style: const TextStyle(
-                                      fontStyle: FontStyle.italic,
+                          title: Text(
+                            dog['name'],
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Country: ${dog['countryOfOrigin']}'),
+                              const SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  dog['ownerImageUrl'] != null
+                                      ? CircleAvatar(
+                                          radius: 15,
+                                          backgroundImage: FileImage(
+                                            File(dog['ownerImageUrl']),
+                                          ),
+                                        )
+                                      : const SizedBox(),
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: Text(
+                                      'Owner: ${dog['ownerName']}',
+                                      style: const TextStyle(
+                                        fontStyle: FontStyle.italic,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                IconButton(
-                                  icon: const Icon(Icons.delete,
-                                      color: Colors.red),
-                                  tooltip: 'Delete dog',
-                                  onPressed: () {
-                                    dogsBox.deleteAt(index);
-                                    setState(() {});
-                                  },
-                                ),
-                              ],
-                            ),
-                          ],
+                                  IconButton(
+                                    icon: const Icon(Icons.delete,
+                                        color: Colors.red),
+                                    tooltip: 'Delete dog',
+                                    onPressed: () {
+                                      dogsBox.deleteAt(index);
+                                      setState(() {});
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
           floatingActionButton: FloatingActionButton(
             onPressed: () => {
