@@ -6,53 +6,35 @@ A feature-rich Flutter app for managing dogs and their owners. Track dog info, o
 
 ## 📦 Features
 
-🐶 Dog Management
+### 🐶 Dog Management
 
 Add, edit, and delete dogs
 
 Track dog name, photo, and country of origin
 
-👤 Owner Management
+### 👤 Owner Management
 
-Add, edit, and delete owner names and photos
+Add, edit, and delete owner names and photos. Inline editing with TextFields and edit/save buttons.
 
-Inline editing with TextFields and edit/save buttons
+### 📸 Photo Integration
 
-📸 Photo Integration
+Select dog photos from a modal. Capture owner photos via camera.
 
-Select dog photos from a modal
-
-Capture owner photos via camera
-
-🌍 Country Selector
+### 🌍 Country Selector
 
 Dropdown to select dog’s country of origin (fetched from GraphQL API)
 
-💾 Persistence
+### 💾 Persistence
 
 Store dog and owner data locally using Hive
 
-🔄 Reset & Refresh
+### 🔄 Reset & Refresh
 
-Reset form fields with a refresh button
+Reset form fields with a refresh button. Real-time updates reflected in the UI.
 
-Real-time updates reflected in the UI
-
-🧪 Error Handling
+### 🧪 Error Handling
 
 Input validation with inline error messages
-
-🔧 Tech Stack
-Area	Package / Technology
-State Mgmt	Riverpod
-
-Local Storage	Hive
-
-Camera	camera
-
-GraphQL	graphql_flutter
-
-UI	Material Design, Responsive Layouts
 
 ## 🔧 Tech Stack
 
