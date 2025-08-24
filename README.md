@@ -68,8 +68,8 @@ Input validation with inline error messages
 ### 2. Install Dependencies
 
 ```bash
-flutter pub get```
-
+flutter pub get
+```
 ---
 
 📝 Notes
